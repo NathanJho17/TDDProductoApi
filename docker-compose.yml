@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  microserive-producto:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8097:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ConnectionStrings__DefaultConnection=Host=db-postgres;Port=5439;Database=DB_productoTDD;User Id=postgres;Password=postgres
+    depends_on:
+      - db-postgres
+  db-postgres:
+    image: postgres:15
+    container_name: productoTDD
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: DB_productoTDD
+    ports:
+      - "5439:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata:

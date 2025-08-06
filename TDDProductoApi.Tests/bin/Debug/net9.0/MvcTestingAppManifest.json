@@ -1,0 +1,6 @@
+{
+  "Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\JhonatanEspinoza\\source\\repos\\TDDProductoApi\\Application",
+  "Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\JhonatanEspinoza\\source\\repos\\TDDProductoApi\\Domain",
+  "Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\JhonatanEspinoza\\source\\repos\\TDDProductoApi\\Infrastructure",
+  "Presentation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\JhonatanEspinoza\\source\\repos\\TDDProductoApi\\Presentation"
+}

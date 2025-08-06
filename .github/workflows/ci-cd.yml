@@ -1,0 +1,51 @@
+name: CI/CD - .NET + Docker Compose + Artefacto
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-test:
+    name: 🧪 Build + Test + Docker Save
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🔁 Checkout del código
+        uses: actions/checkout@v3
+
+      - name: ⚙️ Configurar .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: 📦 Restaurar dependencias
+        run: dotnet restore
+
+      - name: 🛠️ Compilar solución
+        run: dotnet build --configuration Release --no-restore
+
+      - name: 🧪 Ejecutar pruebas unitarias
+        run: dotnet test --no-build --configuration Release
+
+      - name: 🐳 Construir imágenes Docker Compose
+        run: docker-compose build
+
+      - name: 📦 Exportar imágenes como artefacto
+        run: |
+          docker save $(docker images --format "{{.Repository}}:{{.Tag}}" | grep -v "<none>") -o images.tar
+
+      - name: 📤 Subir artefacto Docker
+        uses: actions/upload-artifact@v3
+        with:
+          name: docker-images
+          path: images.tar
+
+  aprobar:
+    name: ✅ Aprobación manual
+    needs: build-test
+    runs-on: ubuntu-latest
+    environment:
+      name: produccion
+    steps:
+      - run: echo "Esperando aprobación..."
+
+  

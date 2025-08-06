@@ -1,0 +1,89 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\JhonatanEspinoza\\source\\repos\\TDDProductoApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{326F85B4-A17A-44BB-8D63-8DCF7E5BFAE1}|Domain\\Domain.csproj|c:\\users\\jhonatanespinoza\\source\\repos\\tddproductoapi\\domain\\entitites\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{326F85B4-A17A-44BB-8D63-8DCF7E5BFAE1}|Domain\\Domain.csproj|solutionrelative:domain\\entitites\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EC5E895-A531-4413-B44C-785910BF5390}|TDDProductoApi.Tests\\TDDProductoApi.Tests.csproj|c:\\users\\jhonatanespinoza\\source\\repos\\tddproductoapi\\tddproductoapi.tests\\usescase\\leerproductocasetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EC5E895-A531-4413-B44C-785910BF5390}|TDDProductoApi.Tests\\TDDProductoApi.Tests.csproj|solutionrelative:tddproductoapi.tests\\usescase\\leerproductocasetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EC5E895-A531-4413-B44C-785910BF5390}|TDDProductoApi.Tests\\TDDProductoApi.Tests.csproj|c:\\users\\jhonatanespinoza\\source\\repos\\tddproductoapi\\tddproductoapi.tests\\usescase\\crearproductocasetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EC5E895-A531-4413-B44C-785910BF5390}|TDDProductoApi.Tests\\TDDProductoApi.Tests.csproj|solutionrelative:tddproductoapi.tests\\usescase\\crearproductocasetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EC5E895-A531-4413-B44C-785910BF5390}|TDDProductoApi.Tests\\TDDProductoApi.Tests.csproj|c:\\users\\jhonatanespinoza\\source\\repos\\tddproductoapi\\tddproductoapi.tests\\customwebapplicationfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EC5E895-A531-4413-B44C-785910BF5390}|TDDProductoApi.Tests\\TDDProductoApi.Tests.csproj|solutionrelative:tddproductoapi.tests\\customwebapplicationfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 238,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Producto.cs",
+              "DocumentMoniker": "C:\\Users\\JhonatanEspinoza\\source\\repos\\TDDProductoApi\\Domain\\Entitites\\Producto.cs",
+              "RelativeDocumentMoniker": "Domain\\Entitites\\Producto.cs",
+              "ToolTip": "C:\\Users\\JhonatanEspinoza\\source\\repos\\TDDProductoApi\\Domain\\Entitites\\Producto.cs",
+              "RelativeToolTip": "Domain\\Entitites\\Producto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T21:39:12.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CrearProductoCaseTest.cs",
+              "DocumentMoniker": "C:\\Users\\JhonatanEspinoza\\source\\repos\\TDDProductoApi\\TDDProductoApi.Tests\\UsesCase\\CrearProductoCaseTest.cs",
+              "RelativeDocumentMoniker": "TDDProductoApi.Tests\\UsesCase\\CrearProductoCaseTest.cs",
+              "ToolTip": "C:\\Users\\JhonatanEspinoza\\source\\repos\\TDDProductoApi\\TDDProductoApi.Tests\\UsesCase\\CrearProductoCaseTest.cs",
+              "RelativeToolTip": "TDDProductoApi.Tests\\UsesCase\\CrearProductoCaseTest.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-29T13:52:08.258Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LeerProductoCaseTest.cs",
+              "DocumentMoniker": "C:\\Users\\JhonatanEspinoza\\source\\repos\\TDDProductoApi\\TDDProductoApi.Tests\\UsesCase\\LeerProductoCaseTest.cs",
+              "RelativeDocumentMoniker": "TDDProductoApi.Tests\\UsesCase\\LeerProductoCaseTest.cs",
+              "ToolTip": "C:\\Users\\JhonatanEspinoza\\source\\repos\\TDDProductoApi\\TDDProductoApi.Tests\\UsesCase\\LeerProductoCaseTest.cs",
+              "RelativeToolTip": "TDDProductoApi.Tests\\UsesCase\\LeerProductoCaseTest.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAqwDkAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-29T13:47:13.433Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CustomWebApplicationFactory.cs",
+              "DocumentMoniker": "C:\\Users\\JhonatanEspinoza\\source\\repos\\TDDProductoApi\\TDDProductoApi.Tests\\CustomWebApplicationFactory.cs",
+              "RelativeDocumentMoniker": "TDDProductoApi.Tests\\CustomWebApplicationFactory.cs",
+              "ToolTip": "C:\\Users\\JhonatanEspinoza\\source\\repos\\TDDProductoApi\\TDDProductoApi.Tests\\CustomWebApplicationFactory.cs",
+              "RelativeToolTip": "TDDProductoApi.Tests\\CustomWebApplicationFactory.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwB8AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T22:37:16.135Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
