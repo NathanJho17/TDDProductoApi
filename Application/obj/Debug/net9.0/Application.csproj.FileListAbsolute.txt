@@ -13,3 +13,4 @@ C:\Users\JhonatanEspinoza\source\repos\TDDProductoApi\Application\obj\Debug\net9
 C:\Users\JhonatanEspinoza\source\repos\TDDProductoApi\Application\obj\Debug\net9.0\refint\Application.dll
 C:\Users\JhonatanEspinoza\source\repos\TDDProductoApi\Application\obj\Debug\net9.0\Application.pdb
 C:\Users\JhonatanEspinoza\source\repos\TDDProductoApi\Application\obj\Debug\net9.0\ref\Application.dll
+C:\Users\JhonatanEspinoza\source\repos\TDDProductoApi\Application\obj\Debug\net9.0\Application.sourcelink.json

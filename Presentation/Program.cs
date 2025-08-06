@@ -1,3 +1,4 @@
+using Application;
 using Application.Mapping;
 using Application.UseCases.ProductoCases;
 using Domain.Entitites;
@@ -34,6 +35,7 @@ else
 builder.Services.AddScoped<IProductoService, ProductoRepository>();
 builder.Services.AddTransient<LeerProductoCase>();
 builder.Services.AddTransient<CrearProductoCase>();
+builder.Services.AddTransient<BorrarProductoCase>();
 
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 builder.Services.AddControllers().AddJsonOptions(opt =>

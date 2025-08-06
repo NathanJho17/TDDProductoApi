@@ -431,3 +431,7 @@ C:\Users\JhonatanEspinoza\source\repos\TDDProductoApi\TDDProductoApi.Tests\obj\D
 C:\Users\JhonatanEspinoza\source\repos\TDDProductoApi\TDDProductoApi.Tests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\JhonatanEspinoza\source\repos\TDDProductoApi\TDDProductoApi.Tests\bin\Debug\net9.0\Npgsql.dll
 C:\Users\JhonatanEspinoza\source\repos\TDDProductoApi\TDDProductoApi.Tests\bin\Debug\net9.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\JhonatanEspinoza\source\repos\TDDProductoApi\TDDProductoApi.Tests\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\JhonatanEspinoza\source\repos\TDDProductoApi\TDDProductoApi.Tests\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\JhonatanEspinoza\source\repos\TDDProductoApi\TDDProductoApi.Tests\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\JhonatanEspinoza\source\repos\TDDProductoApi\TDDProductoApi.Tests\obj\Debug\net9.0\TDDProductoApi.Tests.sourcelink.json

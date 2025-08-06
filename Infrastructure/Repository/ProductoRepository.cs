@@ -18,6 +18,22 @@ namespace Infrastructure.Repository
         {
             _dbContext = dbContext;
         }
+
+        public bool BorrarProductoId(Producto producto)
+        {
+            try
+            {
+                var borrar = _dbContext.Remove(producto);
+                _dbContext.SaveChanges();
+                return true;
+            }
+            catch
+            {
+
+                 throw new Exception($"Error al borrar producto");
+            }
+        }
+
         public async  Task<Producto> BuscarProductoId(int Id)
         {
             return await _dbContext.Productos.FindAsync(Id);

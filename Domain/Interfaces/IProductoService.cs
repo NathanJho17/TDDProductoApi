@@ -11,6 +11,8 @@ namespace Domain.Interfaces
     {
         Task<Producto> BuscarProductoId(int Id);
 
-         Task<Producto> CrearProducto(Producto producto);
+        Task<Producto> CrearProducto(Producto producto);
+
+        bool BorrarProductoId(Producto producto);
     }
 }

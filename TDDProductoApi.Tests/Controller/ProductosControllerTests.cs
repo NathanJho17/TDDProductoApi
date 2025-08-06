@@ -13,11 +13,11 @@ using Xunit;
 namespace TDDProductoApi.Tests.Controller
 {
     //Interfaz cuando la clase no tenga parametros en el constructor
-   // public class ProductosControllerTests : IClassFixture<CustomWebApplicationFactory<Program>>
+    // public class ProductosControllerTests : IClassFixture<CustomWebApplicationFactory<Program>>
 
     public class ProductosControllerTests : IClassFixture<CustomWebApplicationFactory<Program>>
     {
-          
+
 
         [Fact]
         public async Task GetProductoPorId_DeberiaRetornarProducto()
@@ -75,9 +75,68 @@ namespace TDDProductoApi.Tests.Controller
             Assert.Equal(HttpStatusCode.Created, response.StatusCode);
 
 
-            var responseContent =await response.Content.ReadAsStringAsync();
+            var responseContent = await response.Content.ReadAsStringAsync();
             var responseJson = JsonConvert.DeserializeObject<ProductoVerDTO>(responseContent);
             Assert.Equal("Celular", responseJson?.name);
+
         }
+
+        [Fact]
+        public async Task BorrarProducto_DeberiaRetornarDosCientos()
+        {
+            // Arrange
+            var factory = new CustomWebApplicationFactory<Program>();
+            using var scope = factory.Services.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+            var nuevoProducto = new Producto { Nombre = "Monitor_Led", Imagen = "monitor.jpg" };
+            context.Productos.Add(nuevoProducto);
+            context.SaveChanges();
+
+            var productoId = nuevoProducto.Id;
+
+            // Act
+            var cliente = factory.CreateClient();
+            var response = await cliente.DeleteAsync($"api/producto/{productoId}");
+            //Assert
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+
+            var responseContent = await response.Content.ReadAsStringAsync();
+            var responseJson = JsonConvert.DeserializeObject<bool>(responseContent);
+            Assert.True(responseJson);
+        }
+
+        [Fact]
+        public async Task BorrarProducto_DeberiaRetornarCuatroCientos_ProductoNoEncontrado()
+        {
+            // Arrange
+            int id = 9;
+            var factory = new CustomWebApplicationFactory<Program>();
+            using var scope = factory.Services.CreateScope();
+
+            // Act
+            var cliente = factory.CreateClient();
+            var response = await cliente.DeleteAsync($"api/producto/{id}");
+
+            //Assert
+            Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+
+            var responseContent = await response.Content.ReadAsStringAsync();
+            Assert.Equal(responseContent, $"No existe el producto {id} para borrar");
+        }
+
+        [Fact]
+        public async Task BorrarProducto_DeberiaRetornarQuinientos_Excepcion()
+        {
+            // Arrange
+            var factoryError = new CustomWebApplicationFactoryWithError();
+            var cliente = factoryError.CreateClient();
+
+            // Act
+            var response = await cliente.DeleteAsync($"api/producto/99");
+
+            // Assert
+            Assert.Equal(HttpStatusCode.InternalServerError, response.StatusCode);
+        }
+
     }
 }

@@ -140,3 +140,4 @@ C:\Users\JhonatanEspinoza\source\repos\TDDProductoApi\Presentation\bin\Debug\net
 C:\Users\JhonatanEspinoza\source\repos\TDDProductoApi\Presentation\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\JhonatanEspinoza\source\repos\TDDProductoApi\Presentation\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\JhonatanEspinoza\source\repos\TDDProductoApi\Presentation\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\JhonatanEspinoza\source\repos\TDDProductoApi\Presentation\obj\Debug\net9.0\Presentation.sourcelink.json
