@@ -27,7 +27,7 @@ jobs:
         run: dotnet test --no-build --configuration Release
 
       - name: 🐳 Construir imágenes Docker Compose
-        run: docker-compose build microserive-producto
+        run: docker compose build microservicio-producto
 
       - name: 📦 Exportar imágenes como artefacto
         run: |
