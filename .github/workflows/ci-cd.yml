@@ -34,7 +34,7 @@ jobs:
           docker save $(docker images --format "{{.Repository}}:{{.Tag}}" | grep -v "<none>") -o images.tar
 
       - name: 📤 Subir artefacto Docker
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: docker-images
           path: images.tar
