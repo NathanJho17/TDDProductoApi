@@ -11,7 +11,7 @@ namespace TDDProductoApi.Tests;
 
 public class CustomWebApplicationFactoryWithError : WebApplicationFactory<Program>
 {
-     protected override void ConfigureWebHost(IWebHostBuilder builder)
+    protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
         builder.ConfigureTestServices(services =>
         {
@@ -31,6 +31,9 @@ public class CustomWebApplicationFactoryWithError : WebApplicationFactory<Progra
 
             mockService.Setup(s => s.BorrarProductoId(It.IsAny<Producto>()))
                 .Throws(new Exception("Error al borrar"));
+
+            mockService.Setup(s => s.ActualizarProducto(It.IsAny<Producto>()))
+           .Throws(new Exception("No se puedo actualizar el producto"));
 
             services.AddScoped(_ => mockService.Object);
         });

@@ -14,5 +14,7 @@ namespace Domain.Interfaces
         Task<Producto> CrearProducto(Producto producto);
 
         bool BorrarProductoId(Producto producto);
+
+        Task<Producto> ActualizarProducto(Producto producto);
     }
 }

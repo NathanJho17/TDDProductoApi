@@ -14,13 +14,16 @@ namespace MyApp.Namespace
         private readonly LeerProductoCase _leerProductoCase;
         private readonly CrearProductoCase _crearProductoCase;
         private readonly BorrarProductoCase _borrarProductoCase;
+        private readonly EditarProductoCase _editarProductoCase;
 
         public ProductoController(LeerProductoCase leerProductoCase, CrearProductoCase crearProductoCase,
-        BorrarProductoCase borrarProductoCase)
+        BorrarProductoCase borrarProductoCase,
+        EditarProductoCase editarProductoCase)
         {
             _leerProductoCase = leerProductoCase;
             _crearProductoCase = crearProductoCase;
             _borrarProductoCase = borrarProductoCase;
+            _editarProductoCase = editarProductoCase;
         }
 
         [HttpGet("{id}")]
@@ -49,7 +52,7 @@ namespace MyApp.Namespace
             try
             {
                 var res = await _borrarProductoCase.Borrar(id);
-                if (res==false)
+                if (res == false)
                 {
                     return BadRequest($"No existe el producto {id} para borrar");
                 }
@@ -57,6 +60,24 @@ namespace MyApp.Namespace
                 return Ok(res);
             }
             catch (System.Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult<ProductoVerDTO>> EditarProducto(int id, [FromBody] ProductoEditarDTO productoEditDto)
+        {
+            try
+            {
+                var editarProductoCase = await _editarProductoCase.Editar(id, productoEditDto);
+                if (editarProductoCase == null)
+                {
+                    return NotFound($"Producto con ID {id} no encontrado.");
+                }
+                return Ok(editarProductoCase);
+            }
+            catch(System.Exception ex)
             {
                 return StatusCode(500, ex.Message);
             }

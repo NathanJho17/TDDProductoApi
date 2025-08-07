@@ -24,6 +24,11 @@ namespace Application.Mapping
             CreateMap<ProductoCrearDTO, Producto>()
               .ForMember(dto => dto.Nombre, opt => opt.MapFrom(src => src.name))
               .ForMember(dto => dto.Imagen, opt => opt.MapFrom(src => src.image));
+
+              //DTO ProductoVerDTO a Producto
+            CreateMap<ProductoEditarDTO, Producto>()
+              .ForMember(dto => dto.Nombre, opt => opt.MapFrom(src => src.name))
+              .ForMember(dto => dto.Imagen, opt => opt.MapFrom(src => src.image));
         }
     }
 }

@@ -19,6 +19,13 @@ namespace Infrastructure.Repository
             _dbContext = dbContext;
         }
 
+        public Task<Producto> ActualizarProducto(Producto producto)
+        {
+            _dbContext.Update(producto);
+            _dbContext.SaveChanges();
+            return Task.FromResult(producto);
+        }
+
         public bool BorrarProductoId(Producto producto)
         {
             try
@@ -30,11 +37,11 @@ namespace Infrastructure.Repository
             catch
             {
 
-                 throw new Exception($"Error al borrar producto");
+                throw new Exception($"Error al borrar producto");
             }
         }
 
-        public async  Task<Producto> BuscarProductoId(int Id)
+        public async Task<Producto> BuscarProductoId(int Id)
         {
             return await _dbContext.Productos.FindAsync(Id);
         }

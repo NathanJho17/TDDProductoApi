@@ -36,6 +36,8 @@ builder.Services.AddScoped<IProductoService, ProductoRepository>();
 builder.Services.AddTransient<LeerProductoCase>();
 builder.Services.AddTransient<CrearProductoCase>();
 builder.Services.AddTransient<BorrarProductoCase>();
+builder.Services.AddTransient<EditarProductoCase>();
+
 
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 builder.Services.AddControllers().AddJsonOptions(opt =>
